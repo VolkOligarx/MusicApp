@@ -1,3 +1,4 @@
+import * as S from './style'
 import Track from '../Track/Track'
 import TrackSkeleton from '../TrackSkeleton/TrackSkeleton'
 import { useState, useEffect } from 'react'
@@ -20,9 +21,9 @@ const Playlist = () => {
     const isLoading = Loading()
   
     return (
-      <div className="content__playlist playlist">
-        <div className="playlist__item">
-          <div className="playlist__track">
+      <S.Playlist>
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
             {isLoading ? (
               <TrackSkeleton />
             ) : (
@@ -36,11 +37,11 @@ const Playlist = () => {
                 time="4:44"
               />
             )}
-          </div>
-        </div>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
   
-        <div className="playlist__item">
-          <div className="playlist__track">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
             {isLoading ? (
               <TrackSkeleton />
             ) : (
@@ -54,11 +55,11 @@ const Playlist = () => {
                 time="2:22"
               />
             )}
-          </div>
-        </div>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
   
-        <div className="playlist__item">
-          <div className="playlist__track">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
             {isLoading ? (
               <TrackSkeleton />
             ) : (
@@ -72,11 +73,11 @@ const Playlist = () => {
                 time="2:22"
               />
             )}
-          </div>
-        </div>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
   
-        <div className="playlist__item">
-          <div className="playlist__track">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
             {isLoading ? (
               <TrackSkeleton />
             ) : (
@@ -91,11 +92,11 @@ const Playlist = () => {
                 time="4:12"
               />
             )}
-          </div>
-        </div>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
   
-        <div className="playlist__item">
-          <div className="playlist__track">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
             {isLoading ? (
               <TrackSkeleton />
             ) : (
@@ -110,11 +111,11 @@ const Playlist = () => {
                 time="2:54"
               />
             )}
-          </div>
-        </div>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
   
-        <div className="playlist__item">
-          <div className="playlist__track">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
             {isLoading ? (
               <TrackSkeleton />
             ) : (
@@ -129,11 +130,11 @@ const Playlist = () => {
                 time="5:20"
               />
             )}
-          </div>
-        </div>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
   
-        <div className="playlist__item">
-          <div className="playlist__track">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
             {isLoading ? (
               <TrackSkeleton />
             ) : (
@@ -148,11 +149,11 @@ const Playlist = () => {
                 time="3:41"
               />
             )}
-          </div>
-        </div>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
   
-        <div className="playlist__item">
-          <div className="playlist__track">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
             {isLoading ? (
               <TrackSkeleton />
             ) : (
@@ -167,11 +168,11 @@ const Playlist = () => {
                 time="1:48"
               />
             )}
-          </div>
-        </div>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
   
-        <div className="playlist__item">
-          <div className="playlist__track">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
             {isLoading ? (
               <TrackSkeleton />
             ) : (
@@ -186,11 +187,11 @@ const Playlist = () => {
                 time="3:32"
               />
             )}
-          </div>
-        </div>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
   
-        <div className="playlist__item">
-          <div className="playlist__track">
+        <S.PlaylistItem>
+          <S.PlaylistTrack>
             {isLoading ? (
               <TrackSkeleton />
             ) : (
@@ -205,9 +206,9 @@ const Playlist = () => {
                 time="3:36"
               />
             )}
-          </div>
-        </div>
-        </div>
+          </S.PlaylistTrack>
+        </S.PlaylistItem>
+      </S.Playlist>
     )
   }
   

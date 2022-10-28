@@ -1,3 +1,4 @@
+import * as S from './style'
 import Menu from "../Menu/Menu";
 import { useState } from "react"
 
@@ -9,17 +10,17 @@ const Navigation = () => {
 
 
 return (
-<nav className="main__nav nav">
-  <div className="nav__logo logo">
-    <img className="logo__image" src="img/logo.png" alt="logo" />
-  </div>
-  <div onClick={handleClick} className="nav__burger burger">
-    <span className="burger__line" />
-    <span className="burger__line" />
-    <span className="burger__line" />
-  </div>
+<S.MainNav>
+  <S.NavLogo>
+    <S.Logo src='./img/logo.png' alt="logo" />
+  </S.NavLogo>
+  <S.NavBurger onClick={handleClick}>
+    <S.BurgerLine />
+    <S.BurgerLine />
+    <S.BurgerLine />
+  </S.NavBurger>
   {visible && <Menu />}
-</nav>
+</S.MainNav>
 )
 }
 

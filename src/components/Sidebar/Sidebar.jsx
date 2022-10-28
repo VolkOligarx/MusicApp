@@ -1,3 +1,4 @@
+import * as S from './style'
 import SidebarItem from '../SidebarItem/SidebarItem'
 import { Loading } from '../Playlist/Playlist'
 import SidebarSkeleton from '../SidebarSkeleton/SidebarSkeleton'
@@ -6,13 +7,13 @@ const Sidebar = ({ playlists }) => {
   const isLoading = Loading()
 
   return (
-    <div className="sidebar">
-      <div className="sidebar__personal">
-    <p className="sidebar__personal-name">Sergey.Ivanov</p>
-    <div className="sidebar__avatar"></div>
-    </div>
-    <div className="sidebar__block">
-        <div className="sidebar__list">
+    <div /*className="sidebar"*/>
+      <S.SidebarPersonal>
+        <S.SidebarPersonalName>Sergey.Ivanov</S.SidebarPersonalName>
+        <S.SidebarAvatar></S.SidebarAvatar>
+      </S.SidebarPersonal>
+    <S.SidebarBlock>
+        <S.SidebarList>
           {playlists.map((playlist) =>
             isLoading ? (
               <SidebarSkeleton key={playlist.id} />
@@ -24,8 +25,8 @@ const Sidebar = ({ playlists }) => {
               />
             )
           )}
-        </div>
-      </div>
+        </S.SidebarList>
+      </S.SidebarBlock>
     </div>
   )
 }

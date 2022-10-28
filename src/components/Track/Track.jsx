@@ -1,36 +1,38 @@
+import * as S from './style'
+
 const Track = (props) => {
     return (
-        <div className="playlist__track track">
-        <div className="track__title">
-        <div className="track__title-image">
-        <svg className="track__title-svg" alt="music">
+        <S.Track>
+        <S.TrackTitle>
+        <S.TrackTitleImage>
+        <S.TrackTitleSvg alt="music">
               <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
-            </svg>
-          </div>
-          <div className="track__title-text">
-          <a className="track__title-link" href={props.titleLink}>
+            </S.TrackTitleSvg>
+          </S.TrackTitleImage>
+          <div /*className="track__title-text"*/>
+          <S.TrackTitleLink href={props.titleLink}>
               {props.titleName}{' '}
-              <span className="track__title-span">{props.titleSpan}</span>
-            </a>
+              <S.TrackTitleSpan>{props.titleSpan}</S.TrackTitleSpan>
+            </S.TrackTitleLink>
           </div>
-        </div>
-        <div className="track__author">
-        <a className="track__author-link" href={props.authorLink}>
+        </S.TrackTitle>
+        <S.TrackAuthor>
+        <S.TrackAuthorLink href={props.authorLink}>
             {props.authorName}
-          </a>
-        </div>
-        <div className="track__album">
-        <a className="track__album-link" href={props.albumLink}>
+          </S.TrackAuthorLink>
+        </S.TrackAuthor>
+        <S.TrackAlbum>
+        <S.TrackAlbumLink href={props.albumLink}>
             {props.albumName}
-          </a>
-        </div>
-        <div className="track__time">
-        <svg className="track__time-svg" alt="time">
+          </S.TrackAlbumLink>
+        </S.TrackAlbum>
+        <div /*className="track__time"*/>
+        <S.TrackTimeSvg alt="time">
             <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
-          </svg>
-          <span className="track__time-text">{props.time}</span>
+          </S.TrackTimeSvg>
+          <S.TrackTimeText>{props.time}</S.TrackTimeText>
         </div>
-      </div>
+      </S.Track>
     )
   }
   

@@ -1,3 +1,4 @@
+import * as S from './style'
 import Centerblock from '../Centerblock/Centerblock'
 import Sidebar from '../Sidebar/Sidebar'
 import Navigation from '../Navigation/Navigation'
@@ -25,17 +26,17 @@ export const PLAYLISTS = [
 
 const MainPage = () => {
   return (
-    <main className="main">
-      <nav className="main__nav nav">
+    <S.Main>
+      <S.Nav>
         <Navigation />
-      </nav>
-      <div className="main__centerblock centerblock">
+      </S.Nav>
+      <S.Centerblock>
         <Centerblock name="Треки" />
-      </div>
-      <div className="main__sidebar sidebar">
+      </S.Centerblock>
+      <S.Sidebar>
         <Sidebar playlists={PLAYLISTS} />
-      </div>
-    </main>
+      </S.Sidebar>
+    </S.Main>
   )
 }
 

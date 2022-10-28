@@ -1,14 +1,15 @@
+import * as S from './style'
+
 const SidebarItem = (props) => {
     return (
-        <div className="sidebar__item">
-        <a className="sidebar__link" href="http://">
-          <img
-            className="sidebar__img"
+        <S.SidebarItem>
+        <S.SidebarLink href="http://">
+          <S.SidebarImg
             src={props.img}
             alt="day's playlist"
           />
-        </a>
-      </div>
+        </S.SidebarLink>
+      </S.SidebarItem>
     )
   }
   

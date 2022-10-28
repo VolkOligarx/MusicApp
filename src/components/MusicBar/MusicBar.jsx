@@ -1,30 +1,31 @@
+import * as S from './style'
 import Player from '../Player/Player'
 
-const MusicBar = () => {
+const MusicMusicBar = () => {
   return (
-    <div className="bar">
-      <div className="bar__content">
-      <div className="bar__player-progress"/>
-      <div className="bar__player-block">
-      <div className="bar__player player">
+    <S.MusicBar>
+      <S.MusicBarContent>
+      <S.MusicBarPlayerProgress/>
+      <S.MusicBarPlayerBlock>
+      <S.MusicBarPlayer>
           <Player/>
-        </div>
-        <div className="bar__volume-block volume">
-        <div className="volume__content">
-            <div className="volume__image">
-                <svg className="volume__svg" alt="volume">
+        </S.MusicBarPlayer>
+        <S.MusicBarVolumeBlock>
+        <S.VolumeContent>
+            <S.VolumeImage>
+                <S.VolumeSvg alt="volume">
                 <use xlinkHref="img/icon/sprite.svg#icon-volume" />
-                </svg>
-            </div>
-            <div className="volume__progress _btn">
-                <input className="volume__progress-line _btn" type="range" name="range" />
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+                </S.VolumeSvg>
+            </S.VolumeImage>
+            <S.VolumeProgress>
+                <S.VolumeProgressLine type="range" name="range" />
+            </S.VolumeProgress>
+            </S.VolumeContent>
+          </S.MusicBarVolumeBlock>
+        </S.MusicBarPlayerBlock>
+      </S.MusicBarContent>
+    </S.MusicBar>
   )
 }
 
-export default MusicBar
+export default MusicMusicBar

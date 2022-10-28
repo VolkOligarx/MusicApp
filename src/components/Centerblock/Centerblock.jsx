@@ -1,3 +1,4 @@
+import * as S from './style'
 import PlaylistTitle from "../PlaylistTitle/PlaylistTitle"
 import Playlist from "../Playlist/Playlist"
 import { useState } from "react"
@@ -12,93 +13,87 @@ const Centerblock = () => {
         }
 
     return (
-        <div className="centerblock">
-    <div className="centerblock__search search">
-    <svg className="search__svg">
-        <use xlinkHref="img/icon/sprite.svg#icon-search" />
-    </svg>
-    <input
-        className="search__text"
+        <div>
+    <S.CenterblockSearch>
+    <S.SearchSvg>
+      <use xlinkHref="img/icon/sprite.svg#icon-search" />
+    </S.SearchSvg>
+    <S.SearchText
         type="search"
         placeholder="Поиск"
         name="search"
     />
-    </div>      
-    <h2 className="centerblock__h2">Треки</h2>
-    <div className="centerblock__filter filter">
-    <div className="filter__title">Искать по:</div>
-    <div 
+    </S.CenterblockSearch>    
+    <S.CenterblockH2>Треки</S.CenterblockH2>
+    <S.CenterblockFilter>
+    <S.Filter>
+    <S.FilterTitle>Искать по:</S.FilterTitle>
+    <S.FilterButton 
     $active={filter === 'author'}
 
-          onClick={() => selected('author')} 
-          
-          className="filter__button button-author _btn-text">
-
-            исполнителю
-    </div>
+    onClick={() => selected('author')}>
+      исполнителю
+    </S.FilterButton>
     {filter === 'author' && (
-          <div className="filter__select">
-            <div className="filter__select__icon">
-              <p className="filter__select__icon__choose">Michael Jackson</p>
-              <p className="filter__select__icon__choose">Frank Sinatra</p>
-              <p className="filter__select__icon__choose">Calvin Harris</p>
-              <p className="filter__select__icon__choose">Zhu</p>
-              <p className="filter__select__icon__choose">Arctic Monkeys</p>
-              <p className="filter__select__icon__choose">Nero</p>
-              <p className="filter__select__icon__choose">Skeeter Davis</p>
-            </div>
-          </div>
+          <S.FilterSelect>
+            <S.FilterSelectIcon>
+              <S.FilterSelectIconChoose >Michael Jackson</S.FilterSelectIconChoose>
+              <S.FilterSelectIconChoose >Frank Sinatra</S.FilterSelectIconChoose>
+              <S.FilterSelectIconChoose >Calvin Harris</S.FilterSelectIconChoose>
+              <S.FilterSelectIconChoose >Zhu</S.FilterSelectIconChoose>
+              <S.FilterSelectIconChoose >Arctic Monkeys</S.FilterSelectIconChoose>
+              <S.FilterSelectIconChoose >Nero</S.FilterSelectIconChoose>
+              <S.FilterSelectIconChoose>Skeeter Davis</S.FilterSelectIconChoose>
+            </S.FilterSelectIcon>
+          </S.FilterSelect>
         )}
     
-    <div 
+    <S.FilterButton 
     $active={filter === 'year'}
-          onClick={() => selected('year')}
-          
-          className="filter__button button-year _btn-text">
+          onClick={() => selected('year')}>
             году выпуска
-    </div>
+    </S.FilterButton>
             {filter === 'year' && (
-          <div className="filter__select">
-            <div className="filter__select__icon">
-              <div className="filter__year">
-                <input type="radio" name="sort" id="new" />
-                <label className="filter__select__icon__choose" htmlFor="new">Более новые</label>
-                <input type="radio" name="sort" id="old" />
-                <label className="filter__select__icon__choose" htmlFor="old">Более старые</label>
-              </div>
-            </div>
-          </div>
+          <S.FilterSelect>
+            <S.FilterSelectIcon>
+              <S.FilterYear>
+                <S.FilterYearLabel type="radio" name="sort" id="new" />
+                <S.FilterSelectIconChoose htmlFor="new">Более новые</S.FilterSelectIconChoose>
+                <S.FilterYearLabel type="radio" name="sort" id="old" />
+                <S.FilterSelectIconChoose htmlFor="old">Более старые</S.FilterSelectIconChoose>
+              </S.FilterYear>
+            </S.FilterSelectIcon>
+          </S.FilterSelect>
         )}
     
-    <div 
+    <S.FilterButton 
     $active={filter === 'genre'}
-          onClick={() => selected('genre')} 
-          
-          className="filter__button button-genre _btn-text">
+          onClick={() => selected('genre')}>
             жанру
-            </div>
+    </S.FilterButton>
             {filter === 'genre' && (
-          <div className="filter__select">
-            <div className="filter__select__icon">
-              <p className="filter__select__icon__choose">Рок</p>
-              <p className="filter__select__icon__choose">Хип-хоп</p>
-              <p className="filter__select__icon__choose">Поп-музыка</p>
-              <p className="filter__select__icon__choose">Техно</p>
-              <p className="filter__select__icon__choose">Инди</p>
-              <p className="filter__select__icon__choose">Реп</p>
-              <p className="filter__select__icon__choose">Джаз</p>
-            </div>
-          </div>
+          <S.FilterSelect>
+            <S.FilterSelectIcon>
+              <S.FilterSelectIconChoose>Рок</S.FilterSelectIconChoose>
+              <S.FilterSelectIconChoose>Хип-хоп</S.FilterSelectIconChoose>
+              <S.FilterSelectIconChoose>Поп-музыка</S.FilterSelectIconChoose>
+              <S.FilterSelectIconChoose>Техно</S.FilterSelectIconChoose>
+              <S.FilterSelectIconChoose>Инди</S.FilterSelectIconChoose>
+              <S.FilterSelectIconChoose>Реп</S.FilterSelectIconChoose>
+              <S.FilterSelectIconChoose>Джаз</S.FilterSelectIconChoose>
+            </S.FilterSelectIcon>
+          </S.FilterSelect>
         )}
-    </div>      
-    <div className="centerblock__content">
-        <div className="content__title">
+        </S.Filter>
+    </S.CenterblockFilter>   
+    <S.CenterblockContent>
+        <S.ContentTitle>
           <PlaylistTitle />
-        </div>
-        <div className="content__playlist">
+        </S.ContentTitle>
+        <S.ContentPlaylist>
           <Playlist />
-        </div>
-        </div>
+        </S.ContentPlaylist>
+        </S.CenterblockContent>
     </div>
     )
 }

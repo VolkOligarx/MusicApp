@@ -1,37 +1,39 @@
+import * as S from './style'
+
 const TrackPlay = (props) => {
     return (
-        <div className="player__track-play track-play">
-        <div className="track-play__contain">
-        <div className="track-play__image">
-        <svg className="track-play__svg" alt="music">
+        <S.TrackPlay>
+        <S.TrackPlayContain>
+        <S.TrackPlayImage>
+        <S.TrackPlaySvg alt="music">
               <use xlinkHref="img/icon/sprite.svg#icon-note"></use>
-            </svg>
-          </div>
-          <div className="track-play__author">
-          <a className="track-play__author-link" href="http://">
+            </S.TrackPlaySvg>
+          </S.TrackPlayImage>
+          <S.TrackPlayAuthor>
+          <S.TrackPlayAuthorLink href="http://">
               {props.name}
-            </a>
-          </div>
-          <div className="track-play__album">
-          <a className="track-play__album-link" href="http://">
+            </S.TrackPlayAuthorLink>
+          </S.TrackPlayAuthor>
+          <S.TrackPlayAlbum>
+          <S.TrackPlayAlbumLink href="http://">
               {props.author}
-            </a>
-          </div>
-        </div>
+            </S.TrackPlayAlbumLink>
+          </S.TrackPlayAlbum>
+        </S.TrackPlayContain>
   
-        <div className="track-play__like-dis">
-        <div className="track-play__like _btn-icon">
-        <svg className="track-play__like-svg" alt="like">
+        <S.TrackPlayLikeDislike>
+        <S.BtnIcon>
+        <S.TrackPlayLikeSvg alt="like">
               <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
-            </svg>
-          </div>
-          <div className="track-play__dislike _btn-icon">
-          <svg className="track-play__dislike-svg" alt="dislike">
+            </S.TrackPlayLikeSvg>
+          </S.BtnIcon>
+          <S.BtnIcon>
+          <S.TrackPlayDislikeSvg alt="dislike">
               <use xlinkHref="img/icon/sprite.svg#icon-dislike"></use>
-            </svg>
-          </div>
-        </div>
-      </div>
+            </S.TrackPlayDislikeSvg>
+          </S.BtnIcon>
+        </S.TrackPlayLikeDislike>
+      </S.TrackPlay>
     )
   }
   

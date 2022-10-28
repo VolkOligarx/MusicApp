@@ -1,7 +1,7 @@
 const TrackSkeleton = () => {
     return (
       <svg
-        className="track-skeleton"
+        // className="track-skeleton"
         alt="music"
         width="1107"
         height="51"
