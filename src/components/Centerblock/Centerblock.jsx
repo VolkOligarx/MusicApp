@@ -4,7 +4,7 @@ import Playlist from "../Playlist/Playlist"
 import { useState } from "react"
 
 
-const Centerblock = () => {
+const Centerblock = (props) => {
 
         const [filter, setFilter] = useState(null)
         
@@ -24,7 +24,7 @@ const Centerblock = () => {
         name="search"
     />
     </S.CenterblockSearch>    
-    <S.CenterblockH2>Треки</S.CenterblockH2>
+    <S.CenterblockH2>{props.name}</S.CenterblockH2>
     <S.CenterblockFilter>
     <S.Filter>
     <S.FilterTitle>Искать по:</S.FilterTitle>

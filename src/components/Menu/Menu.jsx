@@ -5,17 +5,17 @@ const Menu = () => {
 <S.NavMenu>
   <S.MenuList>
     <S.MenuItem>
-      <S.MenuLink href="http://">
+      <S.MenuLink to="/">
         Главное
       </S.MenuLink>
     </S.MenuItem>
     <S.MenuItem>
-      <S.MenuLink href="http://">
+      <S.MenuLink to="/userCollection">
         Мой плейлист
       </S.MenuLink>
     </S.MenuItem>
     <S.MenuItem>
-      <S.MenuLink href="http://">
+      <S.MenuLink to="/login">
         Войти
       </S.MenuLink>
     </S.MenuItem>

@@ -1,12 +1,15 @@
 import './App.css';
-import { MusicPage } from './pages/MusicPage';
+import { AppRoutes } from './AppRoutes'
 
 function App() {
+
+  const user = localStorage.getItem('token')
+
   return (
-    <div className="wrapper">
+    <div className="App">
         <div className="container">
-          <div className="App">
-              <MusicPage/>
+          <div className="wrapper">
+            <AppRoutes user={user} />
           </div>
         </div>
     </div>

@@ -3,7 +3,7 @@ import Centerblock from '../Centerblock/Centerblock'
 import Sidebar from '../Sidebar/Sidebar'
 import Navigation from '../Navigation/Navigation'
 
-export const PLAYLISTS = [
+export const SidePlaylists = [
     {
       id: 1,
       name: 'Плейлист дня',
@@ -34,7 +34,7 @@ const MainPage = () => {
         <Centerblock name="Треки" />
       </S.Centerblock>
       <S.Sidebar>
-        <Sidebar playlists={PLAYLISTS} />
+        <Sidebar playlists={SidePlaylists} />
       </S.Sidebar>
     </S.Main>
   )

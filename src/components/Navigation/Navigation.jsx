@@ -12,7 +12,7 @@ const Navigation = () => {
 return (
 <S.MainNav>
   <S.NavLogo>
-    <S.Logo src='./img/logo.png' alt="logo" />
+    <S.Logo src='./img/whiteLogo.png' alt="logo" />
   </S.NavLogo>
   <S.NavBurger onClick={handleClick}>
     <S.BurgerLine />
