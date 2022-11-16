@@ -54,7 +54,7 @@ const Centerblock = (props) => {
             году выпуска
     </S.FilterButton>
             {filter === 'year' && (
-          <S.FilterSelect>
+          <S.FilterSelectYear>
             <S.FilterSelectIcon>
               <S.FilterYear>
                 <S.FilterYearLabel type="radio" name="sort" id="new" />
@@ -63,7 +63,7 @@ const Centerblock = (props) => {
                 <S.FilterSelectIconChoose htmlFor="old">Более старые</S.FilterSelectIconChoose>
               </S.FilterYear>
             </S.FilterSelectIcon>
-          </S.FilterSelect>
+          </S.FilterSelectYear>
         )}
     
     <S.FilterButton 

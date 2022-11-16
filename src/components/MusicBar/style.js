@@ -18,10 +18,13 @@ export const MusicBarContent = styled.div`
   flex-direction: column;
 `
 
-export const MusicBarPlayerProgress = styled.div`
-  width: 100%;
+export const MusicBarPlayerProgress = styled.div.attrs((props) => ({
+  style: {
+    width: props.$width,
+  },
+}))`
   height: 5px;
-  background: #2E2E2E;
+  background: #d010cd;
   `
 
 export const MusicBarPlayer = styled.div`

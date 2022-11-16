@@ -25,11 +25,9 @@ export const PlayerButtonPlay = styled(PlayerButton)`
 `
 
 export const PlayerButtonNext = styled(PlayerButton)`
-  margin-right: 28px;
 `
 
 export const PlayerButtonRepeat = styled(PlayerButton)`
-  margin-right: 24px;
 `
 
 export const PlayerButtonShuffle = styled(PlayerButton)`
@@ -40,6 +38,7 @@ export const PlayerButtonShuffle = styled(PlayerButton)`
 export const PlayerButtonPrevSvg = styled.svg`
   width: 15px;
   height: 14px;
+  background-image: url("./img/icon/prev.svg");
 `
 
 export const PlayerButtonPlaySvg = styled.svg`
@@ -50,6 +49,7 @@ export const PlayerButtonPlaySvg = styled.svg`
 export const PlayerButtonNextSvg = styled.svg`
   width: 15px;
   height: 14px;
+  background-image: url("./img/icon/next.svg");
 `
 
 export const PlayerButtonRepeatSvg = styled.svg`
@@ -84,6 +84,7 @@ export const SkeletonLikeDislike = styled.div`
   flex-direction: row;
   align-items: center;
   margin-left: 26%;
+  gap: 8.5px;
 `
 
 export const SkeletonLikeSvg = styled.svg`
@@ -102,7 +103,7 @@ export const SkeletonDislikeSvg = styled.svg`
 
 export const BtnIcon = styled.div`
   padding: 5px;
-  margin-left: 28.5px;
+  margin-left: 20px;
   cursor: pointer;
   &:hover svg {
     fill: transparent;

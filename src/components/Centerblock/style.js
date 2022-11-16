@@ -89,7 +89,19 @@ background: #313131;
 border-radius: 12px;
 padding: 34px;
 position: fixed;
+margin-top: 370px;
 `
+
+export const FilterSelectYear = styled.div`
+margin-top: 10px;
+min-width: 248px;
+background: #313131;
+border-radius: 12px;
+padding: 34px;
+position: fixed;
+margin-top: 180px;
+`
+
 
 export const FilterSelectIcon = styled.div`
   max-height: 237px;
@@ -112,17 +124,18 @@ export const FilterSelectIcon = styled.div`
   }
 `
 export const FilterSelectIconChoose = styled.div`
+  padding-right: 20px;  
     &:hover {
         color: #B672FF;
-        text-decoration: underline;    
+        text-decoration: underline;  
     }
 `
 
 export const FilterYear = styled.div`
+display: flex;
 flex-direction: row;
 overflow: hidden;
 & input[type='radio'] {
-    display: none;
 }
 `
 
@@ -141,7 +154,7 @@ display: inline-block;
     height: 100%;
     position: absolute;
     left: 0;
-    background: url('./img/icon/radio_disable.png') 0 0 no-repeat;
+    // background: url('./img/icon/radio_disable.png') 0 0 no-repeat;
     &:hover:before {
         filter: brightness(80%);
     }
