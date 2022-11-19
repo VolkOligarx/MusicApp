@@ -6,11 +6,13 @@ export const BtnIcon = styled.div`
   cursor: pointer;
   &:hover svg {
     fill: transparent;
-    stroke: #ACACAC;
+    stroke: ${(props) => props.theme.hoverIconColor};
   }
   &:active svg {
     fill: transparent;
-    stroke: #FFFFFF;
+    stroke: ${(props) => props.theme.activeIconColor};
+    fill: ${(props) => props.theme.basicIconColor};
+    stroke: ${(props) => props.theme.activeIconColor};
   }
 `
 
@@ -30,7 +32,7 @@ export const TrackPlayContain = styled.div`
 export const TrackPlayImage = styled.div`
   width: 51px;
   height: 51px;
-  background-color: #313131;
+  background-color: ${(props) => props.theme.elementBackgroundColor};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +56,7 @@ export const TrackPlayAuthorLink = styled.a`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: ${(props) => props.theme.basicTextColor};
   white-space: nowrap;
 `
 
@@ -68,7 +70,7 @@ export const TrackPlayAlbumLink = styled.a`
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: ${(props) => props.theme.basicTextColor};
   `
 
 export const TrackPlayLikeDislike = styled.div`
@@ -82,12 +84,12 @@ export const TrackPlayLikeSvg = styled.svg`
   width: 14px;
   height: 12px;
   fill: transparent;
-  stroke: #696969;
+  stroke: ${(props) => props.theme.basicIconColor};
   `
 
 export const TrackPlayDislikeSvg = styled.svg`
   width: 14.34px;
   height: 13px;
   fill: transparent;
-  stroke: #696969;
+  stroke: ${(props) => props.theme.basicIconColor};
   `

@@ -14,14 +14,14 @@ const PlaylistTitleCol = styled.div`
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 2px;
-  color: #696969;
+  color: color: ${(props) => props.theme.optionalColor};
   text-transform: uppercase;
 `
 export const PlaylistTitleSvg = styled.svg`
   width: 12px;
   height: 12px;
   fill: transparent;
-  stroke: #696969;
+  stroke: ${(props) => props.theme.optionalColor};
   `
 export const PlaylistCol01 = styled(PlaylistTitleCol)`
   width: 451px;

@@ -5,9 +5,9 @@ export const MusicBar = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(28, 28, 28, 0.5);
-  box-shadow: 0 -2px 20px rgba(28, 28, 28, 0.5);
-`
+  background: ${(props) => props.theme.backgroundColor};
+  box-shadow: 0 -2px 20px ${(props) => props.theme.backgroundColor};
+  `
 
 export const Audio = styled.audio`
   display: none;
@@ -24,7 +24,7 @@ export const MusicBarPlayerProgress = styled.div.attrs((props) => ({
   },
 }))`
   height: 5px;
-  background: #d010cd;
+  background: ${(props) => props.theme.progressBarColor};
   `
 
 export const MusicBarPlayer = styled.div`

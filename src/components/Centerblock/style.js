@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const CenterblockSearch = styled.div`
   width: 100%;
-  border-bottom: 1px solid #4E4E4E;
+  border-bottom: 1px solid ${(props) => props.theme.optionalColor};
   margin-bottom: 51px;
   display: flex;
   flex-direction: row;
@@ -27,7 +27,7 @@ export const SearchSvg = styled.svg`
   width: 17px;
   height: 17px;
   margin-right: 5px;
-  stroke: #FFFFFF;
+  stroke: ${(props) => props.theme.activeIconColor};
   fill: transparent;
 `
 
@@ -40,10 +40,10 @@ export const SearchText = styled.input`
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: ${(props) => props.theme.basicTextColor};
   &::placeholder {
     background-color: transparent;
-    color: #FFFFFF;
+    color: ${(props) => props.theme.basicTextColor};
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -74,18 +74,21 @@ export const FilterButton = styled.div`
   border-radius: 60px;
   padding: 6px 20px;
   cursor: pointer;
-  color: #FFFFFF;
+  color: ${(props) =>
+    props.$active ? props.theme.activeTextColor : props.theme.basicTextColor};
+  border-color: ${(props) =>
+    props.$active ? props.theme.activeTextColor : props.theme.basicTextColor};
   margin-right: 10px;
   &:hover {
-    border-color: violet;
-    color: violet;
+    border-color: ${(props) => props.theme.hoverTextColor};
+    color: ${(props) => props.theme.hoverTextColor};
   }
 `
 
 export const FilterSelect = styled.div`
 margin-top: 10px;
 min-width: 248px;
-background: #313131;
+background: ${(props) => props.theme.elementBackgroundColor};
 border-radius: 12px;
 padding: 34px;
 position: fixed;

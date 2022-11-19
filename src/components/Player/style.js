@@ -16,6 +16,14 @@ const PlayerButton = styled.div`
   padding: 5px;
   display: flex;
   align-items: center;
+
+  & svg {
+    fill: ${(props) => props.theme.basicPlayPauseColor};
+  }
+  &:hover svg {
+    fill: ${(props) => props.theme.hoverPlayPauseColor};
+    cursor: pointer;
+  }
 `
 export const PlayerButtonPrev = styled(PlayerButton)`
   margin-right: 23px;
@@ -56,14 +64,14 @@ export const PlayerButtonRepeatSvg = styled.svg`
   width: 18px;
   height: 12px;
   fill: transparent;
-  stroke: #696969;
+  stroke: ${(props) => props.theme.basicIconColor};
   `
 
 export const PlayerButtonShuffleSvg = styled.svg`
   width: 19px;
   height: 12px;
   fill: transparent;
-  stroke: #696969;
+  stroke: ${(props) => props.theme.basicIconColor};
   `
 
   export const SkeletonPlayer = styled.div`
@@ -91,14 +99,14 @@ export const SkeletonLikeSvg = styled.svg`
   width: 14px;
   height: 12px;
   fill: transparent;
-  stroke: #FFFFFF;
+  stroke: ${(props) => props.theme.basicIconColor};
   `
 
 export const SkeletonDislikeSvg = styled.svg`
   width: 14.34px;
   height: 13px;
   fill: transparent;
-  stroke: #FFFFFF;
+  stroke: ${(props) => props.theme.basicIconColor};
   `
 
 export const BtnIcon = styled.div`
@@ -107,12 +115,12 @@ export const BtnIcon = styled.div`
   cursor: pointer;
   &:hover svg {
     fill: transparent;
-    stroke: #ACACAC;
+    stroke: ${(props) => props.theme.hoverIconColor};
   }
   &:active svg {
     fill: transparent;
-    stroke: #AD61FF;
-    fill: #AD61FF;
-    stroke: #FFFFFF;
+    stroke: ${(props) => props.theme.activeIconColor};
+    fill: ${(props) => props.theme.basicIconColor};
+    stroke: ${(props) => props.theme.activeIconColor};
   }
 `
