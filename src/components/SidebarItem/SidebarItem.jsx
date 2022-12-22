@@ -3,7 +3,7 @@ import * as S from './style'
 const SidebarItem = (props) => {
     return (
         <S.SidebarItem>
-        <S.SidebarLink href="http://">
+        <S.SidebarLink href={props.link}>
           <S.SidebarImg
             src={props.img}
             alt="day's playlist"

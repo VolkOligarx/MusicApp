@@ -9,7 +9,7 @@ const Sidebar = ({ playlists }) => {
   return (
     <div /*className="sidebar"*/>
       <S.SidebarPersonal>
-        <S.SidebarPersonalName>Sergey.Ivanov</S.SidebarPersonalName>
+        <S.SidebarPersonalName>сделать логин</S.SidebarPersonalName>
         <S.SidebarAvatar></S.SidebarAvatar>
       </S.SidebarPersonal>
     <S.SidebarBlock>
@@ -22,6 +22,7 @@ const Sidebar = ({ playlists }) => {
                 key={playlist.id}
                 id={playlist.id}
                 img={playlist.img}
+                link={playlist.link}
               />
             )
           )}

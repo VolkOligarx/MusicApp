@@ -91,7 +91,7 @@ const Centerblock = (props) => {
           <PlaylistTitle />
         </S.ContentTitle>
         <S.ContentPlaylist>
-          <Playlist />
+          <Playlist dataPick={props.dataPick} playlistsNumber={props.playlistsNumber} />
         </S.ContentPlaylist>
         </S.CenterblockContent>
     </div>

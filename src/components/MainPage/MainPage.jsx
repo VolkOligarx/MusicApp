@@ -9,18 +9,21 @@ export const SidePlaylists = [
       name: 'Плейлист дня',
       img: 'img/playlist01.png',
       tracks: {},
+      link: '/playlists/1'
     },
     {
       id: 2,
       name: '100 танцевальных хитов',
       img: 'img/playlist02.png',
       tracks: {},
+      link: '/playlists/2'
     },
     {
       id: 3,
       name: 'Инди-заряд',
       img: 'img/playlist03.png',
       tracks: {},
+      link: '/playlists/3'
     },
   ]
 
@@ -31,7 +34,7 @@ const MainPage = () => {
         <Navigation />
       </S.Nav>
       <S.Centerblock>
-        <Centerblock name="Треки" />
+        <Centerblock name="Треки" dataPick="data" />
       </S.Centerblock>
       <S.Sidebar>
         <Sidebar playlists={SidePlaylists} />

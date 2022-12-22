@@ -1,6 +1,12 @@
 import * as S from './style'
 
+export let audio
+export let trackName
+export let author
+
 const Track = (props) => {
+
+  
     return (
         <S.Track>
         <S.TrackTitle>
@@ -10,7 +16,7 @@ const Track = (props) => {
             </S.TrackTitleSvg>
           </S.TrackTitleImage>
           <div /*className="track__title-text"*/>
-          <S.TrackTitleLink href={props.titleLink}>
+          <S.TrackTitleLink onClick={() => {audio = props.titleLink; trackName = props.titleName; author = props.authorName; /*Настроить автозапуск трека по клику*/ }}> 
               {props.titleName}{' '}
               <S.TrackTitleSpan>{props.titleSpan}</S.TrackTitleSpan>
             </S.TrackTitleLink>

@@ -1,5 +1,6 @@
 import * as S from './style'
 import TrackPlay from '../TrackPlay/TrackPlay'
+import { trackName, author } from "../Track/Track";
 import { Loading } from '../Playlist/Playlist'
 import { useState } from "react"
 
@@ -83,7 +84,7 @@ else {
         </S.SkeletonLikeDislike>
       </S.SkeletonPlayer>
       ) : (
-        <TrackPlay name="Ты та..." author="Баста" />
+        <TrackPlay name={trackName} author={author} />
       )}
     </S.Player>
   )

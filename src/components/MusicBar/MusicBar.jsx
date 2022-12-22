@@ -1,14 +1,19 @@
 import * as S from './style'
 import Player from '../Player/Player'
+import { audio } from "../Track/Track";
 import { useRef, useEffect, useState } from 'react'
 
-const MusicMusicBar = () => {
+export const MusicMusicBar = () => {
 
   const audioRef = useRef(null)
 
   const [playerProgress, setPlayerProgress] = useState('0%')
   
   const [isPlaying, setIsPlaying] = useState(false)
+
+  function playOn() {
+    setIsPlaying(!isPlaying)
+  }
 
   useEffect(() => {
     if (isPlaying) {
@@ -26,14 +31,14 @@ const MusicMusicBar = () => {
 
   return (
     <S.MusicBar>
-      <S.Audio src="/BastaTiTa.mp3" ref={audioRef}></S.Audio>
+      <S.Audio src={audio} ref={audioRef}></S.Audio>
       <S.MusicBarContent>
       <S.MusicBarPlayerProgress $width={playerProgress} />
       <S.MusicBarPlayerBlock>
       <S.MusicBarPlayer>
           <Player
           audioRef={audioRef}
-          updateState={() => setIsPlaying(!isPlaying)}/>
+          updateState={playOn}/>
         </S.MusicBarPlayer>
         <S.MusicBarVolumeBlock>
         <S.VolumeContent>
