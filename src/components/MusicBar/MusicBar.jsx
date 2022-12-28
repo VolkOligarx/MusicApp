@@ -14,7 +14,6 @@ export const MusicMusicBar = () => {
   function playOn() {
     setIsPlaying(!isPlaying)
   }
-
   useEffect(() => {
     if (isPlaying) {
       const newProgressInterval = setInterval(() => {
@@ -25,10 +24,9 @@ export const MusicMusicBar = () => {
           clearInterval(newProgressInterval)
           setIsPlaying(false)
         }
-      }, 10)
+      }, 200)
     }
   })
-
   return (
     <S.MusicBar>
       <S.Audio src={audio} ref={audioRef}></S.Audio>

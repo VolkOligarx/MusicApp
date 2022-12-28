@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 
 export const Div = styled.div`
-  height: 33vh;
-  min-width: 22vw;
+  height: 38vh;
+  min-width: 30vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: #FFFFFF;
   border-radius: 12px;
+  margin-top: 30vh;
   & h2 {
     font-size: 6em;
   }

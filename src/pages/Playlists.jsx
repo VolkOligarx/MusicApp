@@ -2,6 +2,7 @@ import * as S from '../components/MainPage/style'
 import Navigation from '../components/Navigation/Navigation'
 import Centerblock from '../components/Centerblock/Centerblock'
 import Sidebar from '../components/Sidebar/Sidebar'
+import MusicBar from '../components/MusicBar/MusicBar'
 import { SidePlaylists } from '../components/MainPage/MainPage'
 import { useParams } from 'react-router-dom'
 
@@ -27,6 +28,7 @@ switch (playlist.id) {
     break;
 }
   return (
+    <div className="main-page">
     <S.Main>
       <S.Nav>
         <Navigation />
@@ -39,6 +41,8 @@ switch (playlist.id) {
         <Sidebar playlists={SidePlaylists} />
       </S.Sidebar>
     </S.Main>
+    <MusicBar />
+    </div>
   )
 }
 

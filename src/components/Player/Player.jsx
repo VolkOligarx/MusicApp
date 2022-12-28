@@ -7,19 +7,19 @@ import { useState } from "react"
 const Player = (props) => {
   const isLoading = Loading()
 
-  const [play, setPlay] = useState('img/icon/sprite.svg#icon-play')
+  const [play, setPlay] = useState('/img/icon/sprite.svg#icon-play')
         
   const played = () => {
     props.updateState()
 
 if (props.audioRef.current.paused) {
       props.audioRef.current.play()
-      setPlay('img/icon/pause.svg#icon-pause')
+      setPlay('/img/icon/pause.svg#icon-pause')
     } 
 
 else {
       props.audioRef.current.pause()
-      setPlay('img/icon/sprite.svg#icon-play')
+      setPlay('/img/icon/sprite.svg#icon-play')
     }
   }
 
@@ -41,14 +41,14 @@ else {
         <S.BtnIcon>
         <S.PlayerButtonRepeat>
         <S.PlayerButtonRepeatSvg alt="repeat">
-            <use xlinkHref="img/icon/sprite.svg#icon-repeat"></use>
+            <use xlinkHref="/img/icon/sprite.svg#icon-repeat"></use>
           </S.PlayerButtonRepeatSvg>
         </S.PlayerButtonRepeat>
         </S.BtnIcon>
         <S.BtnIcon>
         <S.PlayerButtonShuffle>
         <S.PlayerButtonShuffleSvg alt="shuffle">
-            <use xlinkHref="img/icon/sprite.svg#icon-shuffle"></use>
+            <use xlinkHref="/img/icon/sprite.svg#icon-shuffle"></use>
           </S.PlayerButtonShuffleSvg>
         </S.PlayerButtonShuffle>
         </S.BtnIcon>
@@ -73,12 +73,12 @@ else {
         <S.SkeletonLikeDislike>
         <S.BtnIcon>
         <S.SkeletonLikeSvg alt="like">
-              <use xlinkHref="img/icon/sprite.svg#icon-like"></use>
+              <use xlinkHref="/img/icon/sprite.svg#icon-like"></use>
             </S.SkeletonLikeSvg>
           </S.BtnIcon>
           <S.BtnIcon>
           <S.SkeletonDislikeSvg alt="dislike">
-              <use xlinkHref="img/icon/sprite.svg#icon-dislike"></use>
+              <use xlinkHref="/img/icon/sprite.svg#icon-dislike"></use>
             </S.SkeletonDislikeSvg>
           </S.BtnIcon>
         </S.SkeletonLikeDislike>

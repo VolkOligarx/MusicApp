@@ -46,7 +46,7 @@ export const PlayerButtonShuffle = styled(PlayerButton)`
 export const PlayerButtonPrevSvg = styled.svg`
   width: 15px;
   height: 14px;
-  background-image: url("./img/icon/prev.svg");
+  background-image: url("/img/icon/prev.svg");
 `
 
 export const PlayerButtonPlaySvg = styled.svg`
@@ -57,7 +57,7 @@ export const PlayerButtonPlaySvg = styled.svg`
 export const PlayerButtonNextSvg = styled.svg`
   width: 15px;
   height: 14px;
-  background-image: url("./img/icon/next.svg");
+  background-image: url("/img/icon/next.svg");
 `
 
 export const PlayerButtonRepeatSvg = styled.svg`

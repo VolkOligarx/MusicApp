@@ -2,7 +2,6 @@ import * as S from './style'
 import { themes, useThemeContext } from '../../theme'
 
 const Menu = () => {
-
   const { theme, toggleTheme } = useThemeContext()
 
   const sun = '/img/icon/lightTheme.svg#light-theme'

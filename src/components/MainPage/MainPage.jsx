@@ -7,21 +7,21 @@ export const SidePlaylists = [
     {
       id: 1,
       name: 'Плейлист дня',
-      img: 'img/playlist01.png',
+      img: '/img/playlist01.png',
       tracks: {},
       link: '/playlists/1'
     },
     {
       id: 2,
       name: '100 танцевальных хитов',
-      img: 'img/playlist02.png',
+      img: '/img/playlist02.png',
       tracks: {},
       link: '/playlists/2'
     },
     {
       id: 3,
       name: 'Инди-заряд',
-      img: 'img/playlist03.png',
+      img: '/img/playlist03.png',
       tracks: {},
       link: '/playlists/3'
     },

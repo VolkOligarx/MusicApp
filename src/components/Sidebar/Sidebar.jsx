@@ -2,6 +2,7 @@ import * as S from './style'
 import SidebarItem from '../SidebarItem/SidebarItem'
 import { Loading } from '../Playlist/Playlist'
 import SidebarSkeleton from '../SidebarSkeleton/SidebarSkeleton'
+import { username } from "../../pages/Login";
 
 const Sidebar = ({ playlists }) => {
   const isLoading = Loading()
@@ -9,7 +10,7 @@ const Sidebar = ({ playlists }) => {
   return (
     <div /*className="sidebar"*/>
       <S.SidebarPersonal>
-        <S.SidebarPersonalName>сделать логин</S.SidebarPersonalName>
+        <S.SidebarPersonalName>{username}</S.SidebarPersonalName>
         <S.SidebarAvatar></S.SidebarAvatar>
       </S.SidebarPersonal>
     <S.SidebarBlock>

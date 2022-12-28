@@ -4,6 +4,7 @@ import TrackSkeleton from '../TrackSkeleton/TrackSkeleton'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
+export let dataTracks
 export const Loading = () => {
   const [isLoading, setIsLoading] = useState(true)
 
@@ -24,6 +25,8 @@ const Playlist = (props) => {
       case "data":
         axios.get('https://painassasin.online/catalog/track/all/').then(res => {
           track = res.data
+          dataTracks = track
+          console.log(dataTracks);
       });    
         break;
     
@@ -50,7 +53,6 @@ const Playlist = (props) => {
       default:
         break;
     }
-  console.log(track);
     return (
       <S.Playlist>
         <S.PlaylistItem>
